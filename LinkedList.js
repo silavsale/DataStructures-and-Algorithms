@@ -1,6 +1,6 @@
 function LinkedList() {
-    this.head = null
-    this.tail = null
+    this.head = null // головач лена 🐺
+    this.tail = null // хвост до колена 🦨
 }
 
 function Node(value, next, prev) {
@@ -14,21 +14,20 @@ LinkedList.prototype.addToHead = function(value) {
     if (this.head) this.head.prev = newNode
     else this.tail = newNode
     this.head = newNode
-    // console.log('value', value)
-    // console.log('newNode', newNode)
-    // console.log('this.head', this.head)
-    // console.log('this.tail', this.tail)
 }
 
-let aa = new LinkedList 
+LinkedList.prototype.addToTail = function(value){
+    let newNode = new Node(value, null, this.tail)
+    // newNode { value: value, next: null, prev: this.tail }
+    if (this.tail) this.tail.next = newNode
+    else this.head = newNode
+    this.tail = newNode
+}
 
-aa.addToHead(10)
-aa.addToHead(11)
-aa.addToHead(300)
-aa.addToHead(400)
-aa.addToHead(500)
-aa.addToHead(700)
+let ll = new LinkedList
 
-console.log('aa', aa)
+ll.addToHead(1)
+// ll.addToHead(2)
+ll.addToTail(3)
 
-console.log('head')
+console.log(ll)
