@@ -24,10 +24,24 @@ LinkedList.prototype.addToTail = function(value){
     this.tail = newNode
 }
 
+LinkedList.prototype.removeHead = function() {
+    if (!this.head) return null
+    const oldHead = this.head.value
+    if (this.head.next) this.head = this.head.next
+    if (this.head) this.head.prev = null
+    else this.tail = null
+    return oldHead
+}
+
 let ll = new LinkedList
 
-ll.addToHead(1)
 // ll.addToHead(2)
 ll.addToTail(3)
+ll.addToTail(4)
+// ll.addToTail(5)
+ll.addToHead(1)
+ll.addToHead(2)
+// ll.removeHead()
 
+console.log(ll.removeHead())
 console.log(ll)
