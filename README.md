@@ -1,3 +1,8 @@
-### Javascript Data Structures, Algorithms
+# Javascript Data Structures, Algorithms  
+<hr>
+## Linked List
+*
+*
+*
 
-* Linked List
+## Binary Search
