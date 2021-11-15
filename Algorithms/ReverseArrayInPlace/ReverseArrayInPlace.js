@@ -5,7 +5,6 @@ function reverseArrayInPlace(array) {
   let length = array.length - 1
 
   for (let i = 0; i < length / 2; i++) {
-    const element = array[i]
     let head = array[i]
     let tail = array[length - i]
     array[i] = tail
