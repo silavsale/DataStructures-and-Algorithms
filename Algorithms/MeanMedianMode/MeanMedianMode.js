@@ -1,3 +1,4 @@
+// my solution
 function getMean(array) {
   let sum = 0
   array.forEach((element) => {
@@ -33,23 +34,30 @@ function getMedian(array) {
 }
 
 function getMode(array) {
-  let newArray = []
-  let newArray2 = []
+  let newObj = {}
+
   for (let i = 0; i < array.length; i++) {
-    if (array[i] === array[i + 1]) {
-      newArray.push(array[i])
+    if (!newObj[array[i]]) {
+      newObj[array[i]] = 0
     }
+    newObj[array[i]]++
+  }
+  newObj
+
+  let maxFrequency = 0
+  let modes = []
+  for (let num in newObj) {
+    if (newObj[num] > maxFrequency) {
+      modes = [num]
+      maxFrequency = newObj[num]
+    } else if (newObj[num] === maxFrequency) modes.push(num)
   }
 
-  for (let i = 0; i < newArray.length; i++) {
-    if (newArray[i] === newArray[i + 1]) {
-      newArray2.push(newArray[i])
-    }
+  if (modes.length === Object.keys(newObj).length) {
+    modes = []
   }
 
-  if (newArray2.length !== 0) {
-    return newArray2
-  } else return newArray
+  return modes
 }
 
 function meanMedianMode(array) {
@@ -60,4 +68,4 @@ function meanMedianMode(array) {
   return { mean, median, mode }
 }
 
-meanMedianMode([6, 1, 7, 3, 4, 1, 6, 2, 8, 3])
+meanMedianMode([9, 9, 9, 5, 7, 7])
