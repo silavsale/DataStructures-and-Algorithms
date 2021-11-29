@@ -1,3 +1,4 @@
+// Runtime: exponential (bad practice)
 const fibonacci = (position) => {
   if (position < 3) return 1
   else {
