@@ -20,3 +20,4 @@ car1.getCarDescription(74000, 2024, "blue");
 car1.getCarDescription.call(car2, 100000, 2024, "yellow");
 
 car1.getCarDescription.apply(car3, [70000, 2024, "black"]);
+
