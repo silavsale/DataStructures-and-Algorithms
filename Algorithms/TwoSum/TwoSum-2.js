@@ -3,8 +3,8 @@ const twoSum = (numArray, sum) => {
   const hashTable = []
 
   for (let i = 0; i < numArray.length; i++) {
-    let currNum = numArray[i]
-    let counterPart = sum - currNum
+    const currNum = numArray[i]
+    const counterPart = sum - currNum
     if (hashTable.indexOf(counterPart) !== -1) {
       pairs.push([currNum, counterPart])
     }

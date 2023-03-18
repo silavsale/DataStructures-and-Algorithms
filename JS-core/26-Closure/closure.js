@@ -1,15 +1,15 @@
 function outer() {
-  const state = "bug";
+  const state = 'bug'
 
   function inner() {
-    return `Hello ${state}`;
+    return `Hello ${state}`
   }
 
-  return inner;
+  return inner
 }
 
-console.log(outer());
+console.log(outer())
 
 const message = outer()
 
-console.log(message());
+console.log(message())

@@ -5,12 +5,12 @@
 //    properly formatted as JSON.
 
 const myJsonObj = {
-  myString: "string",
+  myString: 'string',
   myNumber: 77,
   myNull: null,
   myBoolean: true,
   myArray: [1, 2, 3],
   myObject: { object: true },
-};
+}
 
-console.log(typeof myJsonObj);
+console.log(typeof myJsonObj)

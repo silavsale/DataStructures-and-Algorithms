@@ -20,7 +20,7 @@ class LinkedList {
       values.push(temp.value)
       temp = temp.next
     }
-    console.log("head ->", values, "<- tail, length =", this.length)
+    console.log('head ->', values, '<- tail, length =', this.length)
   }
 
   push(value) {
@@ -71,7 +71,7 @@ class LinkedList {
     if (!this.head) {
       return undefined
     }
-    let temp = this.head
+    const temp = this.head
     this.head = this.head.next
     temp.next = null
     this.length--
@@ -91,7 +91,7 @@ class LinkedList {
   }
 
   set(index, value) {
-    let temp = this.get(index)
+    const temp = this.get(index)
     if (temp) {
       temp.value = value
       return true
@@ -108,7 +108,7 @@ class LinkedList {
     }
     if (index < 0 || index > this.length) return false
     const newNode = new Node(value)
-    let temp = this.get(index - 1)
+    const temp = this.get(index - 1)
 
     newNode.next = temp.next
     temp.next = newNode
@@ -126,8 +126,8 @@ class LinkedList {
     if (index === this.length) {
       return this.pop()
     }
-    let before = this.get(index - 1)
-    let temp = before.next
+    const before = this.get(index - 1)
+    const temp = before.next
 
     before.next = temp.next
     temp.next = null
@@ -139,7 +139,7 @@ class LinkedList {
     let temp = this.head
     this.head = this.tail
     this.tail = temp
-    let next = temp.next
+    let { next } = temp
     let prev = null
 
     for (let i = 0; i < this.length; i++) {
@@ -151,21 +151,21 @@ class LinkedList {
     return this
   }
 
-  reverseLs(ll) {
-    let temp = ll.head
-    ll.head = ll.tail
-    ll.tail = temp
-    let next = temp.next
-    let prev = null
+  // reverseLs(ll) {
+  //   let temp = ll.head
+  //   ll.head = ll.tail
+  //   ll.tail = temp
+  //   let { next } = temp
+  //   let prev = null
 
-    for (let i = 0; i < ll.length; i++) {
-      next = temp.next
-      temp.next = prev
-      prev = temp
-      temp = next
-    }
-    return ll
-  }
+  //   for (let i = 0; i < ll.length; i++) {
+  //     next = temp.next
+  //     temp.next = prev
+  //     prev = temp
+  //     temp = next
+  //   }
+  //   return ll
+  // }
 }
 
 const myLinkedList = new LinkedList(1)

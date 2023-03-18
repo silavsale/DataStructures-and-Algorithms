@@ -1,6 +1,6 @@
 function harmlessRansomNote(noteText, magazineText) {
-  const noteArr = noteText.split(" ")
-  const mazgazineArr = magazineText.split(" ")
+  const noteArr = noteText.split(' ')
+  const mazgazineArr = magazineText.split(' ')
   const magazineObj = {}
 
   mazgazineArr.forEach((word) => {
@@ -22,6 +22,6 @@ function harmlessRansomNote(noteText, magazineText) {
 }
 
 harmlessRansomNote(
-  "this is the magazine",
-  "this is all the magazine text in the magazine"
+  'this is the magazine',
+  'this is all the magazine text in the magazine',
 )

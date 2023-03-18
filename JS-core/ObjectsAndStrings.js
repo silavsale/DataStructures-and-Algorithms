@@ -1,18 +1,18 @@
-let string1 = "Tampa";
-let string2 = string1;
-string1 = "Venice";
+let string1 = 'Tampa'
+const string2 = string1
+string1 = 'Venice'
 
-console.log(string2);
+console.log(string2)
 
-////////////////////////////////
+/// /////////////////////////////
 
-let person1 = {
-  name: "Alex",
+const person1 = {
+  name: 'Alex',
   age: 30,
-};
+}
 
-let person2 = person1;
+const person2 = person1
 
-person2.name = "Kyle";
+person2.name = 'Kyle'
 
-console.log(person1);
+console.log(person1)

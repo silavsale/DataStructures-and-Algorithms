@@ -15,7 +15,8 @@ function getMedian(array) {
   for (let i = 0; i < array.length; i++) {
     for (let y = 0; y < array.length; y++) {
       if (array[i] < array[y]) {
-        let a, b
+        let a; let
+          b
         a = array[i]
         b = array[y]
         array[y] = a
@@ -24,17 +25,17 @@ function getMedian(array) {
     }
   }
 
-  let middle = array.length / 2
+  const middle = array.length / 2
 
   parseInt(middle)
   console.log(array[parseInt(middle - 1)], array[parseInt(middle)])
   if (array.length % 2 === 1) {
     return array[parseInt(middle)]
-  } else return getMean([array[middle - 1], array[middle]])
+  } return getMean([array[middle - 1], array[middle]])
 }
 
 function getMode(array) {
-  let newObj = {}
+  const newObj = {}
 
   for (let i = 0; i < array.length; i++) {
     if (!newObj[array[i]]) {
@@ -46,7 +47,7 @@ function getMode(array) {
 
   let maxFrequency = 0
   let modes = []
-  for (let num in newObj) {
+  for (const num in newObj) {
     if (newObj[num] > maxFrequency) {
       modes = [num]
       maxFrequency = newObj[num]

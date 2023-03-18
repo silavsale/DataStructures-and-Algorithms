@@ -19,12 +19,12 @@ class Stack {
       array.push(node.value)
       node = node.next
       if (i === 0) {
-        console.log(array[i] + " - top")
+        console.log(`${array[i]} - top`)
       } else {
         console.log(array[i])
       }
     }
-    console.log("Stack length: " + this.length)
+    console.log(`Stack length: ${this.length}`)
   }
 
   push(value) {

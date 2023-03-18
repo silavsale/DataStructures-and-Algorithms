@@ -8,7 +8,7 @@ class Node {
 
 class DoublyLinkedList {
   constructor(value) {
-    let newNode = new Node(value)
+    const newNode = new Node(value)
     this.head = newNode
     this.tail = newNode
     this.length = 1
@@ -21,12 +21,12 @@ class DoublyLinkedList {
       values.push(temp.value)
       temp = temp.next
     }
-    console.log("head ->", values, "<- tail, length =", this.length)
+    console.log('head ->', values, '<- tail, length =', this.length)
   }
 
   // create new node at the end of the list
   push(value) {
-    let newNode = new Node(value)
+    const newNode = new Node(value)
     if (!this.head) {
       this.head = newNode
       this.tail = newNode
@@ -40,7 +40,7 @@ class DoublyLinkedList {
 
   // remove the lest node from the list
   pop() {
-    let temp = this.tail
+    const temp = this.tail
     if (!this.head) {
       return undefined
     }

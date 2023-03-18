@@ -6,15 +6,16 @@ class Cookie {
   getColor() {
     return this.color
   }
+
   setColor(color) {
     this.color = color
   }
 }
 
-let cookieOne = new Cookie("Red")
+const cookieOne = new Cookie('Red')
 
 console.log(cookieOne.getColor())
 
-cookieOne.setColor("Green")
+cookieOne.setColor('Green')
 
 console.log(cookieOne.getColor())

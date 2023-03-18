@@ -1,21 +1,21 @@
 function ceasarCipher(str, num) {
-  num = num % 26
+  num %= 26
 
-  let lowerCaseString = str.toLowerCase()
-  let alphabet = "abcdefghijklmnopqrstuvwxyz".split("")
+  const lowerCaseString = str.toLowerCase()
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('')
 
-  let newString = ""
+  let newString = ''
 
-  for (var i = 0; i < lowerCaseString.length; i++) {
-    let currentLetter = lowerCaseString[i]
-    if (currentLetter === " ") {
+  for (let i = 0; i < lowerCaseString.length; i++) {
+    const currentLetter = lowerCaseString[i]
+    if (currentLetter === ' ') {
       newString += currentLetter
       continue
     }
 
-    let currentIndex = alphabet.indexOf(currentLetter)
+    const currentIndex = alphabet.indexOf(currentLetter)
     let newIndex = currentIndex + num
-    if (newIndex > 25) newIndex = newIndex - 26
+    if (newIndex > 25) newIndex -= 26
     if (newIndex < 0) newIndex = 26 + newIndex
 
     if (str[i] === str[i].toUpperCase()) {
@@ -26,5 +26,5 @@ function ceasarCipher(str, num) {
   return newString
 }
 
-ceasarCipher("Zoo Keeper", 2)
-ceasarCipher("Javascript", -900)
+ceasarCipher('Zoo Keeper', 2)
+ceasarCipher('Javascript', -900)

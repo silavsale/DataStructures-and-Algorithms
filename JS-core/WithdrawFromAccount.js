@@ -1,20 +1,20 @@
 const account1 = {
-  name: "Jen",
+  name: 'Jen',
   totalAmount: 5000,
-  deductAmount: function (amount) {
-    this.totalAmount -= amount;
-    return "Amount in account: " + this.totalAmount;
+  deductAmount(amount) {
+    this.totalAmount -= amount
+    return `Amount in account: ${this.totalAmount}`
   },
-};
+}
 
 const account2 = {
-  name: "James",
+  name: 'James',
   totalAmount: 8000,
-};
+}
 
-const withdrawFromAccount = function (amount) {
-  return account1.deductAmount.bind(account2, amount);
-};
+const withdrawFromAccount = function withdraw(amount) {
+  return account1.deductAmount.bind(account2, amount)
+}
 
-console.log(withdrawFromAccount(500)());
-console.log(withdrawFromAccount(200)());
+console.log(withdrawFromAccount(500)())
+console.log(withdrawFromAccount(200)())

@@ -1,26 +1,26 @@
-let list1 = [1, 2, 3, 4, 5];
-const list2 = list1;
-list1.push(6, 7, 8);
+let list1 = [1, 2, 3, 4, 5]
+const list2 = list1
+list1.push(6, 7, 8)
 
-list1 = [10, 20, 30];
+list1 = [10, 20, 30]
 
-console.log(list1);
-console.log(list2);
+console.log(list1)
+console.log(list2)
 
-let charA = "a";
-const charB = charA;
+let charA = 'a'
+const charB = charA
 
-charA = "b";
+charA = 'b'
 
-console.log(charA);
-console.log(charB);
+console.log(charA)
+console.log(charB)
 
-let array1 = [1, 2, 3, 4, 5];
+const array1 = [1, 2, 3, 4, 5]
 // let array2 = array1.slice();
 // let array2 = array1.concat([]);
-let array2 = [...array1];
+const array2 = [...array1]
 
-array1.push(6, 7, 8);
+array1.push(6, 7, 8)
 
-console.log("array1", array1);
-console.log("array2", array2);
+console.log('array1', array1)
+console.log('array2', array2)

@@ -1,20 +1,20 @@
-let x = 10;
+let x = 10
 
 const a = () => {
-  x = 80;
-  return 80;
-};
-
-a();
-
-function y() {
-  x = 100;
-  return x;
-  function x() {
-    x = 50;
-  }
+  x = 80
+  return 80
 }
 
-y();
+a()
 
-console.log(x);
+// function y() {
+//   x = 100
+//   return x
+//   function x() {
+//     x = 50
+//   }
+// }
+
+// y()
+
+console.log(x)

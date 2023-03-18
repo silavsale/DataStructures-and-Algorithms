@@ -2,6 +2,13 @@
   "extends": "airbnb",
   "rules": {
     // Add or override any rules here
+    "semi": ["error", "never"],
+    "no-unused-vars": "off",
+    "no-plusplus": "off",
+    "quotes": ["error", "single"],
+    "max-classes-per-file": "off",
+    "no-shadow": ["error", { "allow": ["iteratorFunc"] }],
+    "no-console": ["off", { "allow": ["warn", "error"] }]
   },
   "env": {
     "browser": true,

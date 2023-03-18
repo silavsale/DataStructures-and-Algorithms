@@ -6,7 +6,7 @@ const mergeSort = (array) => {
     if (i < array.length / 2) {
       array1.push(array[i])
       if (i > 0 && array1[i - 1] > array1[i]) {
-        let temp = array1[i - 1]
+        const temp = array1[i - 1]
         array1[i - 1] = array1[i]
         array1[i] = temp
       }

@@ -2,11 +2,11 @@
 function reverseArrayInPlace(array) {
   // reverse array
   // return reverced array
-  let length = array.length - 1
+  const length = array.length - 1
 
   for (let i = 0; i < length / 2; i++) {
-    let head = array[i]
-    let tail = array[length - i]
+    const head = array[i]
+    const tail = array[length - i]
     array[i] = tail
     array[length - i] = head
   }

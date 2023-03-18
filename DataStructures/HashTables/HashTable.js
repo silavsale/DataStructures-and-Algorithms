@@ -9,7 +9,7 @@ function HashNode(key, value, next) {
   this.next = next || null
 }
 
-HashTable.prototype.hash = function (key) {
+HashTable.prototype.hash = function hash(key) {
   let total = 0
   for (let i = 0; i < key.length; i++) {
     total += key.charCodeAt(i)
@@ -21,9 +21,9 @@ HashTable.prototype.hash = function (key) {
   return bucket
 }
 
-HashTable.prototype.insert = function (key, value) {
+HashTable.prototype.insert = function insert(key, value) {
   const index = this.hash(key)
-  console.log("INDEX:", index)
+  console.log('INDEX:', index)
   if (!this.buckets[index]) this.buckets[index] = new HashNode(key, value)
   else if (this.buckets[index].key === key) {
     this.buckets[index].value = value
@@ -40,22 +40,21 @@ HashTable.prototype.insert = function (key, value) {
   }
 }
 
-HashTable.prototype.get = function (key) {
+HashTable.prototype.get = function get(key) {
   const index = this.hash(key)
   if (!this.buckets[index]) return null
-  else {
-    let currentNode = this.buckets[index]
-    while (currentNode) {
-      if (currentNode.key === key) {
-        return currentNode.value
-      }
-      currentNode = currentNode.next
+
+  let currentNode = this.buckets[index]
+  while (currentNode) {
+    if (currentNode.key === key) {
+      return currentNode.value
     }
-    return null
+    currentNode = currentNode.next
   }
+  return null
 }
 
-HashTable.prototype.retrieveAll = function () {
+HashTable.prototype.retrieveAll = function retrieveAll() {
   const nodes = []
   for (let i = 0; i < this.buckets.length; i++) {
     let currentNode = this.buckets[i]
@@ -69,13 +68,13 @@ HashTable.prototype.retrieveAll = function () {
 
 const myHt = new HashTable(30)
 
-myHt.insert("Dean", "dean@gmail.com")
-myHt.insert("Megan", "megan@gmail.com")
-myHt.insert("Dane", "dane@gmail.com")
+myHt.insert('Dean', 'dean@gmail.com')
+myHt.insert('Megan', 'megan@gmail.com')
+myHt.insert('Dane', 'dane@gmail.com')
 // myHt.insert("Dean", "dean2@gmail.com")
-myHt.insert("Enda", "endaChamp@gmail.com")
-myHt.insert("Joe", "joey@gmail.com")
-myHt.insert("Samantha", "sammy@gmail.com")
+myHt.insert('Enda', 'endaChamp@gmail.com')
+myHt.insert('Joe', 'joey@gmail.com')
+myHt.insert('Samantha', 'sammy@gmail.com')
 
 // console.log(myHt.get("Enda"))
 

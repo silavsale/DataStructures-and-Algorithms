@@ -3,78 +3,79 @@
 
 class HashTable {
   constructor(size) {
-    this.dataMap = new Array(size);
+    this.dataMap = new Array(size)
   }
 
-  _hash(key) {
-    let hash = 0;
+  hashPrivate(key) {
+    let hash = 0
     for (let i = 0; i < key.length; i++) {
-      hash = (hash + key.charCodeAt(i) * 23) % this.dataMap.length;
+      hash = (hash + key.charCodeAt(i) * 23) % this.dataMap.length
     }
-    return hash;
+    return hash
   }
 
   set(key, value) {
-    let index = this._hash(key);
-    console.log(index);
-    console.log(this.dataMap);
+    const index = this.hashPrivate(key)
+    console.log(index)
+    console.log(this.dataMap)
     if (!this.dataMap[index]) {
-      this.dataMap[index] = [];
+      this.dataMap[index] = []
     }
-    this.dataMap[index].push([key, value]);
-    return this;
+    this.dataMap[index].push([key, value])
+    return this
   }
 
   get(key) {
-    let index = this._hash(key);
+    const index = this.hashPrivate(key)
     if (this.dataMap[index]) {
       for (let i = 0; i < this.dataMap[index].length; i++) {
         if (this.dataMap[index][i][0] === key) {
-          return this.dataMap[index][i][1];
+          return this.dataMap[index][i][1]
         }
       }
     }
-    return undefined;
+    return undefined
   }
+
   keys() {
-    let keys = [];
+    const keys = []
 
     for (let i = 0; i < this.dataMap.length; i++) {
       if (this.dataMap[i]) {
         for (let j = 0; j < this.dataMap[i].length; j++) {
-          keys.push(this.dataMap[i][j][0]);
+          keys.push(this.dataMap[i][j][0])
         }
       }
     }
-    return keys;
+    return keys
   }
 
   about() {
-    return `This Hash Table length = ${this._length()} and has ${this._count()} items.`;
+    return `This Hash Table length = ${this.lengthPrivate()} and has ${this.countPrivate()} items.`
   }
 
-  _length() {
-    return this.dataMap.length;
+  lengthPrivate() {
+    return this.dataMap.length
   }
 
-  _count() {
-    let count = 0;
+  countPrivate() {
+    let count = 0
     for (let i = 0; i < this.dataMap.length; i++) {
       if (this.dataMap[i] !== undefined) {
-        console.log(this.dataMap[i]);
-        count += this.dataMap[i].length;
+        console.log(this.dataMap[i])
+        count += this.dataMap[i].length
       }
     }
-    return count;
+    return count
   }
 }
 
-const hashTable = new HashTable(7);
+const hashTable = new HashTable(7)
 // hashTable.set("IPA", 50);
 // hashTable.set("IPA", 70);
-hashTable.set("bolts", 700);
-hashTable.set("washers", 800);
-hashTable.set("lumber", 100);
-hashTable.get("washers");
-hashTable.about();
-hashTable.keys();
+hashTable.set('bolts', 700)
+hashTable.set('washers', 800)
+hashTable.set('lumber', 100)
+hashTable.get('washers')
+hashTable.about()
+hashTable.keys()
