@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    // Add or override any rules here
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  }
+}
