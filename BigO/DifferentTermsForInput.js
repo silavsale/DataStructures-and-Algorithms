@@ -10,7 +10,7 @@ function logTime(a, b) {
 
 // O(a) * O(b) = O(a * b)
 // eslint-disable-next-line no-redeclare
-function logTime(a, b) {
+function logTime2(a, b) {
   for (let i = 0; i < a; i++) {
     for (let j = 0; j < b; j++) {
       console.log(i, j)

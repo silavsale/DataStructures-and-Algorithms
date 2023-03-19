@@ -36,14 +36,22 @@ function getMode(array) {
 
   let maxFrequency = 0
   let modes = []
-  for (const num in modeObj) {
-    if (modeObj[num] > maxFrequency) {
+  // for (const num in modeObj) {
+  //   if (modeObj[num] > maxFrequency) {
+  //     modes = [num]
+  //     maxFrequency = modeObj[num]
+  //   } else if (modeObj[num] === maxFrequency) {
+  //     modes.push(num)
+  //   }
+  // }
+  Object.entries(modeObj).forEach(([num, frequency]) => {
+    if (frequency > maxFrequency) {
       modes = [num]
-      maxFrequency = modeObj[num]
-    } else if (modeObj[num] === maxFrequency) {
+      maxFrequency = frequency
+    } else if (frequency === maxFrequency) {
       modes.push(num)
     }
-  }
+  })
   if (modes.length === Object.keys(modeObj).length) modes = []
 
   return modes

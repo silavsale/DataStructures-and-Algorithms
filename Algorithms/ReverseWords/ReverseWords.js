@@ -4,7 +4,7 @@ const reverseWords = (string) => {
 
   for (let i = 0; i < arrayOfWords.length; i++) {
     if (arrayOfWords[i] !== undefined) {
-      arrayOfWords[i].length
+      // arrayOfWords[i].length
       let reversedWord = ''
       for (let y = arrayOfWords[i].length; y >= 0; y--) {
         if (arrayOfWords[i][y] !== undefined) {

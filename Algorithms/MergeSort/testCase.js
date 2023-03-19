@@ -1,17 +1,5 @@
 const nums = [4, 3, 2, 1, 6, 6]
 
-function mergeSort(arr) {
-  if (arr.length < 2) {
-    return arr
-  }
-
-  const middle = Math.floor(arr.length / 2)
-  const firstHalf = arr.slice(0, middle)
-  const secondHalf = arr.slice(middle)
-
-  return merge(mergeSort(firstHalf), mergeSort(secondHalf))
-}
-
 function merge(arr1, arr2) {
   let result = []
   while (arr1.length && arr2.length) {
@@ -31,6 +19,18 @@ function merge(arr1, arr2) {
   }
 
   return result
+}
+
+function mergeSort(arr) {
+  if (arr.length < 2) {
+    return arr
+  }
+
+  const middle = Math.floor(arr.length / 2)
+  const firstHalf = arr.slice(0, middle)
+  const secondHalf = arr.slice(middle)
+
+  return merge(mergeSort(firstHalf), mergeSort(secondHalf))
 }
 
 mergeSort(nums)

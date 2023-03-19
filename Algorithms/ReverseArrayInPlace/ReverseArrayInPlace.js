@@ -1,5 +1,6 @@
 // my solution
-function reverseArrayInPlace(array) {
+function reverseArrayInPlace(arr) {
+  const array = arr
   // reverse array
   // return reverced array
   const length = array.length - 1
@@ -18,7 +19,8 @@ reverseArrayInPlace([1, 2, 3, 4, 5, 6, 7, 8, 9])
 
 // ------------------------------------------------------------------------------------------------
 // book solution
-function reverseArrayInPlace2(array) {
+function reverseArrayInPlace2(arr) {
+  const array = arr
   for (let i = 0; i < array.length / 2; i++) {
     const tempVar = array[i]
     array[i] = array[array.length - 1 - i]

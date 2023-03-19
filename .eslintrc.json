@@ -1,5 +1,5 @@
 {
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "rules": {
     // Add or override any rules here
     "semi": ["error", "never"],
@@ -8,7 +8,9 @@
     "quotes": ["error", "single"],
     "max-classes-per-file": "off",
     "no-shadow": ["error", { "allow": ["iteratorFunc"] }],
-    "no-console": ["off", { "allow": ["warn", "error"] }]
+    "no-console": ["off", { "allow": ["warn", "error"] }],
+    "no-param-reassign": "off",
+    "no-use-before-define": ["error", { "variables": false }]
   },
   "env": {
     "browser": true,
