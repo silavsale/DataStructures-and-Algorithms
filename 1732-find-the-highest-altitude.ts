@@ -10,7 +10,9 @@ const gain = [-4, -3, -2, -1, 4, 3, 2];
 
 function largestAltitude(gain: number[]): number {
   let heightDifference = 0;
-  for (let i = 1; i < gain.length; i++) {}
+  for (let i = 1; i < gain.length; i++) {
+    
+  }
 
   return heightDifference;
 }
